@@ -1,16 +1,16 @@
-public class Rotate {
+public class LeftRotate {
     public static void main(String[] args) {
 
         int[] arr = { 1, 2, 3, 4, 5 };
 
         int n = arr.length;
 
-        int temp = arr[n-1];
+        int temp = arr[0];
 
-        for (int i = n - 1; i > 0; i--) {
-            arr[i] = arr[i-1];
+        for (int i = 0; i <n-1; i++) {
+            arr[i] = arr[i+1];
         }
-        arr[0] = temp;
+        arr[n-1] = temp;
 
         for (int k = 0; k < arr.length; k++) {
             System.out.print(arr[k] + " ");
